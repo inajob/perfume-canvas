@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="viewport" content="width=device-width, user-scalable=yes">
+<title>Perfume x Canvas</title>
+<script src="jquery-1.7.2.min.js"></script>
+<script src="perfume.js"></script>
+<style>
+<!--
+*{
+margin:0px;
+padding:0px;
+}
+canvas{
+	border:solid;
+}
+.header{
+	background-color:black;
+	color:white;
+}
+
+.footer{
+	background-color:black;
+	color:white;
+	height:32px;
+	text-align:right;
+	padding:10px;
+}
+.footer a{
+color:#aaf;
+}
+.center{
+	text-align:center;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.desc{
+	margin:1em;
+	background-color:#ddd;
+	padding:1em;
+}
+
+/* floating */
+.lfloat{
+    float:left;
+}
+.lpad{
+    padding-left:10px;
+}
+.clbr{
+clear:both;
+}
+
+.pad{
+padding:1em;
+}
+
+.widget{
+width:400px;
+}
+-->
+
+</style>
+</head>
+<body>
+<div class="header center">
+	<h1>Perfume × Canvas</h1>
+	<div>
+	  <div class="lfloat lpad">
+	    <a href="http://b.hatena.ne.jp/entry/" class="hatena-bookmark-button" data-hatena-bookmark-layout="simple" title="このエントリーをはてなブックマークに追加"><img src="http://b.st-hatena.com/images/entry-button/button-only.gif" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="http://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+	  </div>
+	  <div id="tweet" class="lfloat lpad">
+	    <a href="https://twitter.com/share" class="twitter-share-button" data-url="" data-count="none">Tweet</a>
+	    <script>!function(d,s,id){var s,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+	  </div>
+	  <div class="lfloat lpad">
+	    <div class="fb-like" data-send="false" data-width="120" data-show-faces="true" data-colorscheme="dark" data-font="arial"></div>
+	  </div>
+	  <br class="clbr">
+	</div>
+</div>
+<div class="center">
+  <div class="pad">
+    <canvas width="500" height="400" id="canv"></canvas>
+    <div>
+      <input type="text" id="user" value="ina_ani">
+	<input type="button" id="ok" value="change face">
+    </div>
+  </div>
+	<div>
+		<h2>これは何？</h2>
+		<p class="desc">
+		<a href="http://www.perfume-global.com">Perfumeのモーションデータが公開されていた</a>ので、せっかくなのでJavaScriptで描画してやろうと思って書いてみました。
+		HTML5のCanvasを使って、配布されているそのままのBVHデータを読み込んで表示しています。
+		<br />
+		3Dの処理というか、座標変換は全部自前で書いています。 モーションブラーかけるとかっこいいね
+		</p>
+
+		<h2>宣伝</h2>
+		<p class="desc">
+		  他にも色々作っていますが おすすめは <a href="http://inajob.no-ip.org:10080/mce/mce.html">魔法陣</a>!
+		</p>
+		
+		<h2>更新履歴</h2>
+		  <dl class="desc">
+		    <dt>2012/04/04</dt>
+		    <dd><a href="http://gigazine.net/news/20120404-perfume-canvas/">Gigazineで紹介されました！</a></dd>
+		    <dt>2012/04/02</dt>
+		    <dd>顔を付けれるようにしました</dd>
+		    <dt>2012/04/01</dt>
+		    <dd>公開</dd>
+		  </dl>
+
+		<h2>他の作品</h2>
+		<div class="center widget">
+		  <script src="http://gmodules.com/ig/ifr?url=http://inajob.no-ip.org/dev/intro/gprofread.xml&synd=open&w=400&h=600&title=&border=%23ffffff%7C0px%2C0px+solid+%23ffffff&output=js"></script>
+		</div>
+		<a href="http://inajob.no-ip.org:10080/twlogin/data/5643382%3A%252Fprojects%252Findex.html">もっと詳しく</a>
+	</div>
+</div>
+<div class="footer">
+created by <a href="http://twitter.com/ina_ani">@ina_ani</a>  <a href="http://d.hatena.ne.jp/inajob/">id:inajob</a>
+
+</div>
+</body>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/ja_JP/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+</html>
