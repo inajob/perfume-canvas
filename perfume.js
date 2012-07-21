@@ -397,7 +397,9 @@ $(function(){
 			    ctx.lineTo(-1,1);
 			    ctx.stroke();
 			    ctx.rotate(Math.PI);
-			    ctx.drawImage(img,-1,-1,2,2);
+			    try{
+				ctx.drawImage(img,-1,-1,2,2);
+			    }catch(e){}
 			    ctx.strokeStyle = "black";
 				    
 			    ctx.restore();
